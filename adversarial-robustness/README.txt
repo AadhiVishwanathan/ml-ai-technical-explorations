@@ -49,7 +49,7 @@ Per-class accuracy under PGD attack:
 | Undefended | dog (1.7%), deer (2.0%), cat (~3%) | horse (18.0%), truck (14.2%), ship (11.7%) |
 | FGSM-AT | cat (54.4%), dog (57.5%) | truck (87.9%), car (83.5%), frog (81.1%) |
 
-(See `results/` folder for attack comparison and saliency map images)
+Below: a cat image, correctly classified originally, misclassified as "bird" after an imperceptible FGSM perturbation. The saliency map shows the model's attention spread diffusely across the image rather than concentrated on the cat itself.
 
 Analysis
 The properly-adapted, well-trained classifier (89.68% clean accuracy) loses most of its accuracy under imperceptible perturbations: FGSM reduces it to 26.80%, and PGD reduces it further to 8.57%. This result is stable across random seeds — a repeated run with different initialization seeds produced a mean baseline of 89.77% (± 0.42) and mean PGD accuracy of 8.17% (± 0.82), confirming the original run was not an outlier.
